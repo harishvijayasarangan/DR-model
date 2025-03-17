@@ -48,4 +48,4 @@ dr_app = gr.Interface(
     analytics_enabled=False,
 )
 if __name__ == "__main__":
-    dr_app.launch()
+    dr_app.launch(server_name="0.0.0.0", server_port=8080)
