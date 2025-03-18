@@ -38,12 +38,12 @@ dr_app = gr.Interface(
     inputs=gr.Image(type="pil"),
     outputs=gr.Label(),
     title="Diabetic Retinopathy Detection",
-    description="This app uses a quantized ONNX model for DR detection.",
+    description="",
     examples=[
-        "sample/10_left.jpeg",
-        "sample/10_right.jpeg",
-        "sample/15_left.jpeg",
-        "sample/16_right.jpeg",
+        "sample/1.jpeg",
+        "sample/2.jpeg",
+        "sample/3.jpeg",
+        "sample/4.jpeg",
     ],
     analytics_enabled=False,
 )
