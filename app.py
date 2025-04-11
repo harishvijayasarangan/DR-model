@@ -29,9 +29,9 @@ def predict(input_img):
     exp_preds = np.exp(prediction - np.max(prediction))
     probabilities = exp_preds / exp_preds.sum()    
     confidences = {labels[i]: float(probabilities[i]) for i in labels}
-    filtered_confidences = {key: confidences[key] for key in ["No DR", "Severe"]}
-    #return confidences
-    return filtered_confidences
+    #filtered_confidences = {key: confidences[key] for key in ["No DR", "Severe"]}
+    #return filtered_confidences
+    return confidences
 
 dr_app = gr.Interface(
     fn=predict,
