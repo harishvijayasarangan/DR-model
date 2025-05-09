@@ -31,7 +31,15 @@ def predict(input_img):
     confidences = {labels[i]: float(probabilities[i]) for i in labels}
     #filtered_confidences = {key: confidences[key] for key in ["No DR", "Severe"]}
     #return filtered_confidences
-    return confidences
+    #return confidences
+    s = (confidences["Severe"] + confidences["Proliferative DR"])
+    m = (confidences["Mild"] + confidences["Moderate"])
+    filtered_confidences = {
+        "No DR": confidences["No DR"],
+        "Severe": s ,
+        "Moderate": m,
+    }
+    return filtered_confidences
 
 dr_app = gr.Interface(
     fn=predict,
