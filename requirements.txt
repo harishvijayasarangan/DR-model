@@ -1,4 +1,4 @@
-onnxruntime 
-numpy 
-gradio 
+streamlit
+onnxruntime
+numpy
 Pillow
